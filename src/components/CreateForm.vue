@@ -18,12 +18,15 @@
                 inputtingText:""
             }
         },
+        computed:{
+            
+        },
         methods:{
              handleChange:function(event){
                 this.inputtingText = event.target.value;
             },
             handleAdd:function(){
-                this.$emit("addNew",this.inputtingText)
+                this.$store.commit("todoListValue",this.inputtingText)
             }
         }
     }
